@@ -1,1 +1,39 @@
-D
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>API - libyzxy0</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="body">
+    <nav>
+        <ion-icon name="menu-outline" data-sidebar-toggle></ion-icon>
+        <h3>Libyzxy0 Api</h3>
+    </nav>
+    <div class="sidebar" data-sidebar>
+        <div class="top">
+            <ion-icon class="icon" name="newspaper-outline"></ion-icon>
+            <h3>Documentations</h3>
+            <ion-icon class="menu" name="expand-outline"></ion-icon>
+        </div>
+        <p class="small-tittle">Endpoints</p>
+        <ul>
+            <li>Shoti <ion-icon onclick="window.location.href='/api/shoti'" name="open-outline"></ion-icon></li>
+            <li>Simsimi <ion-icon onclick="window.location.href='/api/simsimi?message=Hello'" name="open-outline"></ion-icon></li>
+            <li>Text to speech <ion-icon onclick="window.location.href='/api/tts?lang=en&prompt=Hello'" name="open-outline"></ion-icon></li>
+            <li>Tiktokdl <ion-icon onclick="window.location.href='/api/tiktok-dl?url=https://vt.tiktok.com/ZS8PDoUx1'" name="open-outline"></ion-icon></li>
+            <li>Quotes (Today) <ion-icon onclick="window.location.href='/api/qoutes/today'" name="open-outline"></ion-icon></li>
+            
+        </ul>
+    </div>
+    
+    
+    
+    
+    
+    <script src="script.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+</body>
+</html>

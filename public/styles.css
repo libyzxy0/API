@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@500&display=swap');
+/* 
+font-family: 'Fredoka One', cursive;
+font-family: 'Nunito', sans-serif;
+*/
+
+:root {
+    --primary: #ff0073;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+::selection {
+    color: hsl(0, 0%, 84%);
+    background: var(--primary);
+    opacity: 0.7;
+}
+body {
+    background-color: #f3f3f3;
+    animation: onload 2s;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 2.5rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    z-index: 3;
+}
+nav ion-icon {
+    color: hsl(0, 0%, 84%);
+    font-size: 24px;
+    margin-left: 0.7rem;
+}
+nav ion-icon.active {
+    color: var(--primary);
+}
+nav h3 {
+    margin-left: 0.4rem;
+    color: var(--primary);
+    font-family: 'Nunito', cursive;
+    font-size: 16px;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    height: 100vh;
+    width: 11rem;
+    margin-top: 2.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease-in-out;
+    transform: translateX(-4rem);
+}
+.sidebar.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0rem);
+}
+.sidebar .top {
+    background-color: #ffffff;
+    height: 2.5rem;
+    border-bottom: 0.4px solid hsl(0, 0%, 84%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.sidebar .top .icon {
+    color: var(--primary);
+    font-size: 18px;
+    margin-left: 0.6rem;
+}
+.sidebar .top .menu {
+    color: hsl(0, 0%, 84%);
+    font-size: 18px;
+    margin-left: 0.5rem;
+}
+.sidebar .top h3 {
+    color: var(--primary);
+    font-family: 'Nunito', sans-serif;
+    margin-left: 0.4rem;
+    font-size: 14px;
+}
+.sidebar .small-tittle {
+    color: var(--primary);
+    font-weight: 500;
+    font-size: 17px;
+    margin: 0.6rem 0.7rem;
+    font-family: 'Nunito', sans-serif;
+}
+.sidebar ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0.7rem;
+}
+.sidebar ul li {
+    text-decoration: none;
+    color: var(--primary);
+    font-family: 'Nunito', sans-serif;
+    transition: 0.3s;
+    list-style-type: none;
+    font-size: 15.5px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.3rem;
+}
+.sidebar ul li ion-icon {
+    font-size: 14px;
+    margin-left: 0.3rem;
+    color: hsl(0, 0%, 84%);
+    transition: 0.4s;
+}
+.sidebar ul li ion-icon:hover {
+    color: var(--primary);
+    font-size: 15px;
+    cursor: pointer;
+}
+@keyframes onload {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
