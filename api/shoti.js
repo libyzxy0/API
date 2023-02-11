@@ -1,10 +1,9 @@
 const fs = require("fs");
-let active = false;
+let active = true;
 
 const errIDs = () => Math.random().toString(36).substr(2, 41);
 const errID = errIDs();
 const shoti = (callback) => {
-console.info("[Shoti] ", "Detected request!");
 if(!active) {
 	callback({
 	code: 400,
@@ -35,7 +34,6 @@ if(!active) {
 }
 }
 const shotiAdd = (url, callback) => {
-console.info("[Shoti] ", "Detected post request!");
 if(!active) {
 	callback({
 	code: 400,
