@@ -13,8 +13,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/api', routes);
 
-//app.use(notFound);
-//app.use(errorHandlerMiddleware);
+app.use(notFound);
+app.use(errorHandlerMiddleware);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => console.log(`Api is listening on port ${port}!`));
