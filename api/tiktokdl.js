@@ -1,8 +1,7 @@
-//Mark agero api
 const request = require("request");
 const axios = require("axios");
 const tiktokdl = (url, callback) => {
-	let a = axios.get('https://ttdl.markkevin5.repl.co/?link=' + url);
+	let a = axios.get('https://tiktok-dl-api.libyzxy0.repl.co/?url=' + url);
 	a.then((response) => {
     console.log(response.data)
     let video = response.data.link;
